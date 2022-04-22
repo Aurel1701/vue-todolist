@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="./logo.png" alt="">
+        <h1 class="title">Boolean</h1>
+    </header>
+    <div class="container">
+        <div class="card">
+            <div id="app">
+                <div>
+                    <input type="text" placeholder="Add a new Task" v-model="newToDo" @keyup.enter="addToDo">
+                    <button @click="Add">Add</button>
+                </div>
+                <h3 class="second-title">Todo List</h3>
+                <ul class="lista" v-if="toDoList.length > 0">
+                    <li v-for="(toDo, index) in toDoList">
+                        <span @click="Completed(toDoList, index)" :class="{Text: toDoList[index].completed}">
+                            {{toDo.text}}
+                        </span>
+                        <i class="fas fa-times-circle" @click="remove(index)"></i>
+                    </li>
+                </ul>
+                <h1 v-else="toDoList.length = 0">Task Completed</h1>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./assets/app.js"></script>
+</body>
+
+</html>

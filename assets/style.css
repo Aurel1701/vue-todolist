@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+.logo{
+    width: 60px;
+    padding: 10px;
+}
+
+.title{
+    font-size: 60px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+.card{
+    background-color:azure;
+    padding: 30px;
+
+}
+.second-title{
+    margin-top: 15px;
+}
+.lista{
+    margin-top: 15px;
+}
+input{
+    padding: 10px;
+    border-radius: 15px;
+}
+button{
+    padding: 10px;
+    border-radius: 15px;
+}
